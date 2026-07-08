@@ -1,24 +1,24 @@
-function getNextSgranarDate() {
+function getNextFrancigenaDate() {
     const now = new Date();
     let year = now.getFullYear();
 
-    const target = new Date(year, 5, 7, 9, 30, 0);
+    const target = new Date(year, 9, 10, 9, 0, 0);
 
     if (now > target) {
       year++;
     }
 
-    return new Date(year, 5, 7, 9, 30, 0);
+    return new Date(year, 9, 10, 9, 0, 0);
   }
 
-  const targetDate = getNextSgranarDate();
+  const targetDate = getNextFrancigenaDate();
 
   function updateCountdown() {
     const now = new Date();
     const diff = targetDate - now;
 
     if (diff <= 0) {
-      document.getElementById("countdown").innerHTML = "Sgranar per Colli è iniziato!";
+      document.getElementById("countdown").innerHTML = "La Francigena Ultra Marathon è iniziata!";
       return;
     }
 

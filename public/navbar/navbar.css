@@ -1,22 +1,22 @@
 :root {
-  --primary: #e43f32;
-  --primary-hover: #bd2f27;
-  --primary-soft: #ffd84d;
+    --primary: #c64735;
+    --primary-hover: #9e3027;
+    --primary-soft: #d8ad4a;
 
-  --bg-main: #fff8e8;
-  --bg-secondary: #eaf2ec;
-  --bg-card: #FFFFFF;
-  --bg-alt: #f4d95a;
+    --bg-main: #f6f0e4;
+    --bg-secondary: #dfe8dc;
+    --bg-card: #FFFFFF;
+    --bg-alt: #d8ad4a;
 
-  --text-main: #241426;
-  --text-secondary: #4d2762;
-  --text-muted: #6b596e;
-  --text-disabled: #8C8C8C;
-  --text-white: #FFFFFF;
+    --text-main: #191d2f;
+    --text-secondary: #25386a;
+    --text-muted: #626569;
+    --text-disabled: #8C8C8C;
+    --text-white: #FFFFFF;
 
-  --border-light: #eadfc6;
-  --radius-small: 6px;
-  --radius-big: 12px;
+    --border-light: #ded4c2;
+    --radius-small: 6px;
+    --radius-big: 12px;
 }
 
 .navbar {
@@ -41,16 +41,7 @@
 }
 
 .navbar.navbar-scrolled {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    background-color: rgba(17, 17, 17, 0.4);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    position: relative;
 }
 
 /* Bottone hamburger */
@@ -73,7 +64,7 @@
 /* Logo */
 .logo a {
     text-decoration: none;
-    color: black;
+    color: var(--text-white);
     font-size: 20px;
 }
 
@@ -98,7 +89,7 @@
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
-    color: var(--primary);
+    color: var(--bg-main);
     display: block;
     font-family: var(--font-base);
 }

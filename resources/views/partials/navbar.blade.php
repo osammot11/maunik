@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/navbar/navbar.css?v=3.1">
-<script src="/navbar/navbar.js?v=1.92" defer></script>
+<link rel="stylesheet" href="/navbar/navbar.css?v=3.5">
+<script src="/navbar/navbar.js?v=2" defer></script>
 
 <nav class="navbar">
     <div class="hamburger" onclick="openMenu()">
@@ -11,7 +11,7 @@
     </div>
 
     <div class="logo">
-        <img alt="Logo Sgranar per Colli" src="/images/sgranar/logo-bianco-rosso.svg" style="max-width: 130px">
+        <h5 style="color: white;">FRANCIGENA ULTRA MARATHON</h5>
     </div>
 </nav>
 
@@ -26,7 +26,7 @@
     <a class="hamburger-menu-link" href="/">Homepage</a>
     <a class="hamburger-menu-link" href="/iscrizione">Iscrizione</a>
     <a class="hamburger-menu-link" href="/#programma">Programma</a>
-    <a class="hamburger-menu-link" href="/#percorsi">Partenze</a>
+    <a class="hamburger-menu-link" href="/#percorsi">Tratte</a>
     <a class="hamburger-menu-link" href="/regolamento">Regolamento</a>
     <a class="hamburger-menu-link" href="/contattaci">Contattaci</a>
     <a class="hamburger-menu-link" href="/partnership">Partnership</a>

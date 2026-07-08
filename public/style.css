@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --primary: #e43f32;
-  --primary-hover: #bd2f27;
-  --primary-soft: #ffd84d;
+  --primary: #c64735;
+  --primary-hover: #9e3027;
+  --primary-soft: #d8ad4a;
 
-  --bg-main: #fff8e8;
-  --bg-secondary: #eaf2ec;
+  --bg-main: #f6f0e4;
+  --bg-secondary: #dfe8dc;
   --bg-card: #FFFFFF;
-  --bg-alt: #f4d95a;
+  --bg-alt: #d8ad4a;
 
-  --text-main: #241426;
-  --text-secondary: #4d2762;
-  --text-muted: #6b596e;
+  --text-main: #191d2f;
+  --text-secondary: #25386a;
+  --text-muted: #626569;
   --text-disabled: #8C8C8C;
   --text-white: #FFFFFF;
 
-  --border-light: #eadfc6;
+  --border-light: #ded4c2;
   --font-base: 'Barlow Condensed', sans-serif;
   --radius-small: 6px;
   --radius-big: 12px;
@@ -136,22 +136,22 @@ li {
 }
 
 .btn-2:hover {
-  background: black;
+  background: var(--text-secondary);
   color: white;
   border: solid 1px white;
 }
 
 .btn-green {
-  background-color: #21af40;
+  background-color: #5b7f5c;
   color: white;
-  border-color: #21af40;
+  border-color: #5b7f5c;
   transition: all 0.3s ease;
 }
 
 .btn-green:hover {
-  color: #21af40;
-  background-color: #f2fff5;
-  border-color: #21af40;
+  color: #3f623f;
+  background-color: #eef5ea;
+  border-color: #5b7f5c;
 }
 
 .hyperlink {
@@ -228,38 +228,47 @@ section {
 /* Homepage */
 
 .topbar {
-    background-color: var(--primary);
-    height: 56px;
+  background-color: var(--text-secondary);
+  height: 56px;
+}
+
+.topbar h4 {
+  color: var(--text-white);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .site-header .navbar {
-    background-color: var(--text-secondary);
+  background-color: var(--text-secondary);
 }
 
 .home-page .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .home-page .site-header .navbar {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .topbar-logo {
-    width: 132px;
-    max-height: 42px;
+  width: 132px;
+  max-height: 42px;
+  color: var(--text-white);
 }
 
 .home-hero {
-    background: linear-gradient(rgba(36, 20, 38, 0.18), rgba(36, 20, 38, 0.68)),
-                url(images/sgranar/copertina-sito.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 136px;
+  background: linear-gradient(rgba(25, 29, 47, 0.18), rgba(25, 29, 47, 0.72)),
+    url(images/francigena/hero-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 136px;
 }
 
 .hero-title {
@@ -327,9 +336,9 @@ section {
 }
 
 .card-green {
-  border: solid 7px #2f9c65;
+  border: solid 7px #5b7f5c;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03), 0 10px 20px rgba(0, 0, 0, 0.05);
-  background-color: #e2ffe9;
+  background-color: #eef5ea;
   padding: 45px;
 }
 
@@ -356,10 +365,6 @@ section {
   align-items: flex-start;
 }
 
-.route-card .btn {
-  margin-top: auto;
-}
-
 .route-badge {
   display: inline-flex;
   min-width: 92px;
@@ -373,7 +378,7 @@ section {
 }
 
 .route-rosa {
-  background: #f6a6bd;
+  background: #d98973;
 }
 
 .route-bianca {
@@ -638,7 +643,7 @@ section {
 .faq-item {
   border: 1px solid var(--border-light);
   border-radius: 0px;
-  background: #fff;
+  background: var(--bg-card);
   overflow: hidden;
 }
 
@@ -655,12 +660,12 @@ section {
   font: inherit;
   font-size: 18px;
   font-weight: 600;
-  color: #111;
+  color: var(--text-main);
   cursor: pointer;
 }
 
 .faq-question:hover {
-  background: #f8f8f3;
+  background: #f1eadb;
 }
 
 .faq-question:focus-visible {
@@ -776,8 +781,8 @@ section {
   }
 
   .home-hero {
-    background: linear-gradient(rgba(36, 20, 38, 0.20), rgba(36, 20, 38, 0.72)),
-      url(images/sgranar/copertina-sito.jpg);
+    background: linear-gradient(rgba(25, 29, 47, 0.22), rgba(25, 29, 47, 0.78)),
+      url(images/francigena/hero-1-mobile.jpg);
     background-position: center top;
   }
 
@@ -821,6 +826,11 @@ section {
   .btn,
   .btn-2 {
     font-size: 15px;
+  }
+
+  .topbar h4 {
+    font-size: 16px;
+    padding: 0 16px;
   }
 
   .sgranar-band {

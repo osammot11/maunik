@@ -5,8 +5,8 @@
     {
         "@@context": "https://schema.org",
         "@@type": "WebSite",
-        "name": "Sgranar per Colli",
-        "url": "https://sgranarpercolli.it/",
+        "name": "Walking Francigena Ultra Marathon",
+        "url": "https://www.francigenaultramarathon.com/",
         "inLanguage": "it"
     }
     </script>
@@ -15,27 +15,27 @@
     {
         "@@context": "https://schema.org",
         "@@type": "SportsEvent",
-        "name": "Sgranar per Colli 2026",
-        "startDate": "2026-06-07T09:30:00+02:00",
+        "name": "Walking Francigena Ultra Marathon 2026",
+        "startDate": "2026-10-10T09:00:00+02:00",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "eventStatus": "https://schema.org/EventScheduled",
-        "url": "https://sgranarpercolli.it/",
-        "image": "https://sgranarpercolli.it/images/2023/copertina_sito.jpg",
-        "description": "Camminata non competitiva tra le colline della Valdinievole, con partenze scaglionate e programma eventi dal 5 al 7 giugno 2026.",
+        "url": "https://www.francigenaultramarathon.com/",
+        "image": "https://www.francigenaultramarathon.com/wp-content/uploads/2026/03/Bozza-aggiornamento-sito-WFU-2025-13-2048x1151.png",
+        "description": "Cammino non competitivo lungo la Via Francigena, da Siena ad Acquapendente, con tratte dai 15 ai 130 km.",
         "location": {
             "@@type": "Place",
-            "name": "Parco Ox Centro Giovani",
+            "name": "Via Francigena, da Siena ad Acquapendente",
             "address": {
                 "@@type": "PostalAddress",
-                "addressLocality": "Borgo a Buggiano",
-                "addressRegion": "Toscana",
+                "addressLocality": "Siena",
+                "addressRegion": "Toscana e Lazio",
                 "addressCountry": "IT"
             }
         },
         "organizer": {
             "@@type": "Organization",
-            "name": "Sgranar per Colli",
-            "url": "https://sgranarpercolli.it/"
+            "name": "A.S.D. GTS Outdoor",
+            "url": "https://www.francigenaultramarathon.com/"
         }
     }
     </script>
@@ -44,14 +44,14 @@
 @section('content')
     <div class="home-hero">
         <section class="hero-height center-text light-color center-items">
-            <h3 class="primary-color">7 giugno 2026</h3>
-            <h1 class="top-margin-large hero-title">SGRANAR PER COLLI</h1>
-            <p class="top-margin-large hero-copy">La camminata più attesa della Valdinievole torna tra colline, borghi, sapori e tre giorni di festa.</p>
-            <a href="/iscrizione" class="btn top-margin-xl mobile-fullwidth">Acquista biglietti</a>
+            <h3 class="primary-color">10/11 ottobre 2026</h3>
+            <h1 class="top-margin-large hero-title">FRANCIGENA ULTRA MARATHON</h1>
+            <p class="top-margin-large hero-copy">L’esperienza oltre il cammino, da Siena ad Acquapendente.<br>Scegli la tua tratta, dai 15 ai 130 km.</p>
+            <a href="/iscrizione" class="btn top-margin-xl">Iscriviti</a>
         </section>
 
         <section>
-            <div class="countdown" id="countdown" aria-label="Conto alla rovescia per Sgranar per Colli 2026">
+            <div class="countdown" id="countdown" aria-label="Conto alla rovescia per la Francigena Ultra Marathon 2026">
                 <div class="time-box">
                     <h2 id="days">00</h2>
                     <small>Giorni</small>
@@ -75,17 +75,17 @@
     <main>
         <section class="grid-2 intro-section">
             <div>
-                <h2>Una festa da camminare</h2>
+                <h2>Il tuo cammino. La tua storia.</h2>
                 <p class="top-margin-large">
-                    Sgranar per Colli porta il passo lento dentro la Valdinievole: percorsi a partenza scaglionata, soste di gusto, musica, market, laboratori e incontri nel verde di Borgo a Buggiano.
+                    La Walking Francigena Ultra Marathon unisce il piacere del cammino a lungo raggio con la scoperta di territori ricchi di storia e bellezza lungo la Via Francigena.
                 </p>
                 <p class="top-margin-large">
-                    Dal 5 al 7 giugno il Parco Ox diventa il cuore del programma, con area food & beverage aperta nelle serate e la camminata in calendario domenica 7 giugno.
+                    Un evento non competitivo, aperto a camminatori con esperienze diverse: dalla tratta breve alla grande sfida, da Siena ad Acquapendente.
                 </p>
             </div>
             <div class="card">
                 <div class="hero-top">
-                    <img src="/images/sgranar/asino-rosso.svg" alt="Asino rosso Sgranar per Colli" class="pellegrino" id="pellegrino">
+                    <img src="/images/francigena/logo-francigena.jpg" alt="Logo Walking Francigena Ultra Marathon" class="pellegrino" id="pellegrino">
 
                     <div class="titolo-box center-text" id="titoloBox">
                         <div class="numero iscritti-title">{{ $totalIscritti }}</div>
@@ -93,74 +93,74 @@
                     </div>
                 </div>
                 <p class="iscritti-paragraph top-margin-large center-text">
-                    Le colline rendono meglio quando si cammina insieme. Se non lo hai già fatto, <a class="main-text-color" href="/iscrizione">iscriviti</a>.
+                    Centinaia di persone scelgono ogni anno di mettersi in cammino. Se vuoi esserci, <a class="main-text-color" href="/iscrizione">iscriviti</a>.
                 </p>
             </div>
         </section>
 
         <section id="percorsi">
-            <h2 class="center-text">Scegli la tua partenza</h2>
+            <h2 class="center-text">Scegli la tua tratta</h2>
             <div class="grid-3 top-margin-xl">
                 <div class="card route-card stack-mid">
-                    <span class="route-badge route-rosa">09:30</span>
-                    <h3>Partenza Rosa</h3>
-                    <p>La prima onda della camminata, pensata per chi vuole partire presto e godersi il programma con calma.</p>
-                    <a href="/iscrizione?percorso=Partenza%20Rosa" class="btn mobile-fullwidth">Iscriviti</a>
+                    <span class="route-badge route-rosa">130 km</span>
+                    <h3>Grande Sfida</h3>
+                    <p>Da Siena ad Acquapendente, giorno e notte: la proposta per chi vuole misurarsi con l’intero orizzonte della Via Francigena.</p>
+                    <a href="/iscrizione?percorso=Grande%20Sfida%20130%20km" class="btn mobile-fullwidth">Iscriviti</a>
                 </div>
 
                 <div class="card route-card stack-mid">
-                    <span class="route-badge route-bianca">10:15</span>
-                    <h3>Partenza Bianca</h3>
-                    <p>Una fascia centrale per vivere il percorso con ritmo disteso, soste e atmosfera di gruppo.</p>
-                    <a href="/iscrizione?percorso=Partenza%20Bianca" class="btn mobile-fullwidth">Iscriviti</a>
+                    <span class="route-badge route-bianca">Intermedio</span>
+                    <h3>Tratte Intermedie</h3>
+                    <p>Percorsi pensati per vivere distanza, borghi e paesaggio con una sfida importante ma accessibile a camminatori allenati.</p>
+                    <a href="/iscrizione?percorso=Tratte%20intermedie" class="btn mobile-fullwidth">Iscriviti</a>
                 </div>
 
                 <div class="card route-card stack-mid">
-                    <span class="route-badge route-gialla">11:00</span>
-                    <h3>Partenza Gialla</h3>
-                    <p>L’ultima partenza della mattina, ideale per chi vuole arrivare nel pieno della giornata al Parco Ox.</p>
-                    <a href="/iscrizione?percorso=Partenza%20Gialla" class="btn mobile-fullwidth">Iscriviti</a>
+                    <span class="route-badge route-gialla">15 km+</span>
+                    <h3>Tratte Brevi</h3>
+                    <p>Il modo più semplice per entrare nell’esperienza WFU: cammino, socialità e scoperta della Francigena a passo sostenibile.</p>
+                    <a href="/iscrizione?percorso=Tratte%20brevi" class="btn mobile-fullwidth">Iscriviti</a>
                 </div>
             </div>
         </section>
 
         <section class="sgranar-band">
             <div>
-                <h2>5-6-7 giugno 2026</h2>
+                <h2>Dieci anni di passi, sfide ed emozioni</h2>
                 <p class="top-margin-large">
-                    Tre giorni di appuntamenti: area relax, market, info point, libri, laboratori, degustazioni, land art e food & beverage nelle serate.
+                    Una manifestazione che attraversa territori, borghi e paesaggi mozzafiato, portando camminatori e comunità dentro una storia da vivere e raccontare.
                 </p>
             </div>
-            <a href="/iscrizione" class="btn btn-2 top-margin-large mobile-fullwidth">Biglietti camminata</a>
+            <a href="/iscrizione" class="btn btn-2 top-margin-large mobile-fullwidth">Accetto la sfida</a>
         </section>
 
         <section id="programma">
-            <h2 class="center-text">Programma eventi</h2>
+            <h2 class="center-text">L’esperienza WFU</h2>
             <div class="grid-3 top-margin-xl">
                 <div class="card program-card">
-                    <h3>5 giugno</h3>
+                    <h3>Sport</h3>
                     <ul class="program-list">
-                        <li><strong>17:00</strong> Apertura evento, market e area food.</li>
-                        <li><strong>18:00</strong> Incontri e presentazioni.</li>
-                        <li><strong>22:00</strong> Musica dal vivo e DJ set.</li>
+                        <li><strong>Cammino</strong> Tratte di diversa distanza, dai 15 ai 130 km.</li>
+                        <li><strong>Ritmo</strong> Una sfida personale, non competitiva.</li>
+                        <li><strong>Resistenza</strong> Percorsi per livelli facile, intermedio ed esperto.</li>
                     </ul>
                 </div>
 
                 <div class="card program-card">
-                    <h3>6 giugno</h3>
+                    <h3>Natura</h3>
                     <ul class="program-list">
-                        <li><strong>17:00</strong> Market, laboratori e programma culturale.</li>
-                        <li><strong>18:30</strong> Rundagiata per Colli.</li>
-                        <li><strong>22:00</strong> Concerti e DJ set.</li>
+                        <li><strong>Paesaggio</strong> Colline, strade bianche e orizzonti della Francigena.</li>
+                        <li><strong>Attraversamento</strong> Un itinerario tra Toscana e Lazio.</li>
+                        <li><strong>Passo lento</strong> Il territorio vissuto metro dopo metro.</li>
                     </ul>
                 </div>
 
                 <div class="card program-card">
-                    <h3>7 giugno</h3>
+                    <h3>Cultura</h3>
                     <ul class="program-list">
-                        <li><strong>08:30</strong> Bike per Colli.</li>
-                        <li><strong>09:30 / 10:15 / 11:00</strong> Partenze Sgranar.</li>
-                        <li><strong>13:00</strong> Festa, food e musica fino a sera.</li>
+                        <li><strong>Borghi</strong> Luoghi e comunità lungo il cammino.</li>
+                        <li><strong>Storia</strong> Uno degli itinerari più suggestivi d’Europa.</li>
+                        <li><strong>Racconto</strong> Un capitolo personale da portare a casa.</li>
                     </ul>
                 </div>
             </div>
@@ -168,10 +168,10 @@
 
         <section>
             <div class="grid-2 top-margin-xl visual-section">
-                <img src="/images/sgranar/copertina-sito.jpg" alt="Panorama collinare di Sgranar per Colli" loading="lazy" decoding="async">
+                <img src="/images/francigena/salto.jpg" alt="Camminatori lungo la Via Francigena" loading="lazy" decoding="async">
                 <div>
-                    <h2>Valdinievole a passo lento</h2>
-                    <p class="top-margin-large">Un progetto popolare, colorato e conviviale: si parte per camminare, si resta per incontrarsi.</p>
+                    <h2>In cammino da Siena ad Acquapendente</h2>
+                    <p class="top-margin-large">Un percorso che attraversa il giorno, la notte e il paesaggio: la Francigena diventa esperienza fisica, memoria e incontro.</p>
                     <a href="/iscrizione" class="btn top-margin-xl mobile-fullwidth">Partecipa</a>
                 </div>
             </div>
@@ -183,31 +183,31 @@
             <div class="faq-accordion top-margin-xl">
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Quando si svolge Sgranar per Colli 2026?</span>
+                        <span>Quando si svolge la Francigena Ultra Marathon 2026?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="top-margin-large">La camminata si svolge domenica 7 giugno 2026, dentro un programma eventi attivo dal 5 al 7 giugno.</p>
+                        <p class="top-margin-large">La demo è impostata sul weekend del 10/11 ottobre 2026, con partenza del countdown al 10 ottobre alle 09:00.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Quali partenze posso scegliere?</span>
+                        <span>Quali tratte posso scegliere?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="top-margin-large">Sono disponibili tre fasce: Partenza Rosa alle 09:30, Partenza Bianca alle 10:15 e Partenza Gialla alle 11:00.</p>
+                        <p class="top-margin-large">Per questa demo sono disponibili tre macro-scelte: Grande Sfida 130 km, Tratte intermedie e Tratte brevi.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>Dove si trova il cuore dell’evento?</span>
+                        <span>Dove si sviluppa il percorso?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="top-margin-large">Il programma fa riferimento al Parco Ox Centro Giovani, a Borgo a Buggiano in provincia di Pistoia.</p>
+                        <p class="top-margin-large">Il racconto della demo segue l’asse della Via Francigena da Siena ad Acquapendente, tra Toscana e Lazio.</p>
                     </div>
                 </div>
 

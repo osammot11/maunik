@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento - Sgranar per Colli</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css?v=1.6') }}">
+    <title>Pagamento - Francigena Ultra Marathon</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css?v=1.8') }}">
     <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body class="center-items checkout-body">
@@ -56,10 +56,10 @@
             appearance: {
                 theme: 'stripe',
                 variables: {
-                    colorPrimary: '#e43f32',
+                    colorPrimary: '#c64735',
                     colorBackground: '#ffffff',
-                    colorText: '#241426',
-                    colorDanger: '#bd2f27',
+                    colorText: '#191d2f',
+                    colorDanger: '#9e3027',
                     fontFamily: '"Barlow Condensed", sans-serif',
                     borderRadius: '6px',
                     spacingUnit: '5px',
@@ -71,12 +71,12 @@
                         fontSize: '20px',
                     },
                     '.Input:focus': {
-                        border: '1px solid #e43f32',
-                        boxShadow: '0 0 0 1px #e43f32',
+                        border: '1px solid #c64735',
+                        boxShadow: '0 0 0 1px #c64735',
                     },
                     '.Label': {
                         fontSize: '20px',
-                        color: '#241426',
+                        color: '#191d2f',
                     },
                 },
             },

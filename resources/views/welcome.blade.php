@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iscrizione Sgranar per Colli</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css?v=1.6') }}">
+    <title>Iscrizione Francigena Ultra Marathon</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css?v=1.8') }}">
 </head>
 <body class="center-items checkout-body">
 
     <div class="checkout-wrapper stack-large">
-        <h1 class="center-text">Iscrizione Sgranar per Colli</h1>
+        <h1 class="center-text">Iscrizione Francigena Ultra Marathon</h1>
 
         <form action="{{ route('checkout.store') }}" method="POST" id="marathon-form">
             @if($errors->any())
@@ -53,10 +53,10 @@
                         <div class="label-box">
                             <label>Scelta del percorso</label>
                             <select name="tickets[0][route_choice]" required>
-                                <option value="">Scelta Partenza</option>
-                                <option value="Partenza Rosa" {{ request('percorso') == 'Partenza Rosa' ? 'selected' : '' }}>Partenza Rosa - 09:30</option>
-                                <option value="Partenza Bianca" {{ request('percorso') == 'Partenza Bianca' ? 'selected' : '' }}>Partenza Bianca - 10:15</option>
-                                <option value="Partenza Gialla" {{ request('percorso') == 'Partenza Gialla' ? 'selected' : '' }}>Partenza Gialla - 11:00</option>
+                                <option value="">Scelta tratta</option>
+                                <option value="Grande Sfida 130 km" {{ request('percorso') == 'Grande Sfida 130 km' ? 'selected' : '' }}>Grande Sfida - 130 km</option>
+                                <option value="Tratte intermedie" {{ request('percorso') == 'Tratte intermedie' ? 'selected' : '' }}>Tratte intermedie</option>
+                                <option value="Tratte brevi" {{ request('percorso') == 'Tratte brevi' ? 'selected' : '' }}>Tratte brevi</option>
                             </select>
                         </div>
 
@@ -222,7 +222,7 @@
             updateProvinces(regionSelect, true);
         }
 
-        function updateProvinces(regionSelect, setPistoiaDefault = false) {
+        function updateProvinces(regionSelect, setSienaDefault = false) {
             const block = regionSelect.closest('.ticket-block');
             const provinceSelect = block.querySelector('.province-select');
             const region = regionSelect.value;
@@ -230,7 +230,7 @@
             provinceSelect.innerHTML = '<option value="">Seleziona Provincia</option>';
             if (italyLocations[region]) {
                 italyLocations[region].sort().forEach(prov => {
-                    const isSelected = (setPistoiaDefault && prov === 'Pistoia') ? 'selected' : '';
+                    const isSelected = (setSienaDefault && prov === 'Siena') ? 'selected' : '';
                     provinceSelect.innerHTML += `<option value="${prov}" ${isSelected}>${prov}</option>`;
                 });
             }

@@ -24,13 +24,15 @@ class SendTicketEmail implements ShouldQueue
 
     public function handle()
     {
-        $thankYouLink = route('checkout.success', ['order_code' => $this->ticket->order->group_code]);
-        
+        $thankYouLink = route("checkout.success", [
+            "order_code" => $this->ticket->order->group_code,
+        ]);
+
         $htmlContent = "
             <h2>Ciao {$this->ticket->first_name}, iscrizione confermata!</h2>
-            <p>La tua partecipazione a Sgranar per Colli è ufficiale.</p>
+            <p>La tua partecipazione alla Walking Francigena Ultra Marathon è ufficiale.</p>
             <p>Puoi accedere alla tua area riservata per scaricare il tuo biglietto nominale in PDF in qualsiasi momento:</p>
-            <p><a href='{$thankYouLink}' style='padding: 10px 20px; background-color: #e43f32; color: white; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px;'>Scarica il tuo Biglietto</a></p>
+            <p><a href='{$thankYouLink}' style='padding: 10px 20px; background-color: #c64735; color: white; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px;'>Scarica il tuo Biglietto</a></p>
             <p>A presto!</p>
 
             <p>Se non riesci ad aprire il biglietto, copia e incolla nel browser questo link:</p>
@@ -40,28 +42,34 @@ class SendTicketEmail implements ShouldQueue
 
         // Chiamata API diretta e leggerissima a Brevo
         $response = Http::withHeaders([
-            'api-key' => env('BREVO_API_KEY'),
-            'Content-Type' => 'application/json',
-            'Accept' => 'application/json'
-        ])->post('https://api.brevo.com/v3/smtp/email', [
-            'sender' => [
-                'name' => env('BREVO_SENDER_NAME', 'Sgranar per Colli'),
-                'email' => env('BREVO_SENDER_EMAIL', 'info@sgranarpercolli.it')
+            "api-key" => env("BREVO_API_KEY"),
+            "Content-Type" => "application/json",
+            "Accept" => "application/json",
+        ])->post("https://api.brevo.com/v3/smtp/email", [
+            "sender" => [
+                "name" => env("BREVO_SENDER_NAME", "Tommaso Giovannoni"),
+                "email" => env(
+                    "BREVO_SENDER_EMAIL",
+                    "info@tommasogiovannoni.com",
+                ),
             ],
-            'to' => [
+            "to" => [
                 [
-                    'email' => $this->ticket->email,
-                    'name' => $this->ticket->first_name . ' ' . $this->ticket->last_name
-                ]
+                    "email" => $this->ticket->email,
+                    "name" =>
+                        $this->ticket->first_name .
+                        " " .
+                        $this->ticket->last_name,
+                ],
             ],
-            'subject' => 'Iscrizione Confermata - Sgranar per Colli',
-            'htmlContent' => $htmlContent
+            "subject" => "Iscrizione Confermata - Francigena Ultra Marathon",
+            "htmlContent" => $htmlContent,
         ]);
 
         // Controllo errori
         if ($response->failed()) {
-            Log::error('Errore invio Brevo: ' . $response->body());
-            throw new \Exception('Chiamata API Brevo fallita.');
+            Log::error("Errore invio Brevo: " . $response->body());
+            throw new \Exception("Chiamata API Brevo fallita.");
         }
     }
 }
