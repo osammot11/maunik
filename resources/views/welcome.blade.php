@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iscrizione Francigena Ultra Marathon</title>
+    <title>Iscrizione Maunìk Trail 2026</title>
     <link rel="stylesheet" href="{{ asset('css/style.css?v=1.8') }}">
 </head>
 <body class="center-items checkout-body">
 
     <div class="checkout-wrapper stack-large">
-        <h1 class="center-text">Iscrizione Francigena Ultra Marathon</h1>
+        <div class="center-items"><a href="/"><img src="/images/maunik/logo.avif" alt="Maunìk Trail" style="width:84px;height:auto"></a></div>
+        <h1 class="center-text">Iscrizione Maunìk Trail</h1>
+        <p class="center-text">Scegli la tua gara e unisciti ai Maunikers.</p>
 
         <form action="{{ route('checkout.store') }}" method="POST" id="marathon-form">
             @if($errors->any())
@@ -53,10 +55,9 @@
                         <div class="label-box">
                             <label>Scelta del percorso</label>
                             <select name="tickets[0][route_choice]" required>
-                                <option value="">Scelta tratta</option>
-                                <option value="Grande Sfida 130 km" {{ request('percorso') == 'Grande Sfida 130 km' ? 'selected' : '' }}>Grande Sfida - 130 km</option>
-                                <option value="Tratte intermedie" {{ request('percorso') == 'Tratte intermedie' ? 'selected' : '' }}>Tratte intermedie</option>
-                                <option value="Tratte brevi" {{ request('percorso') == 'Tratte brevi' ? 'selected' : '' }}>Tratte brevi</option>
+                                <option value="">Scegli la gara</option>
+                                <option value="Maunik Trail 23K" {{ request('percorso') == 'Maunik Trail 23K' ? 'selected' : '' }}>Maunìk Trail — 23 km / 1.200 D+</option>
+                                <option value="Staffetta Maunik" {{ request('percorso') == 'Staffetta Maunik' ? 'selected' : '' }}>Staffetta Maunìk — 12 km + 11 km</option>
                             </select>
                         </div>
 
@@ -216,13 +217,13 @@
             const regionSelect = block.querySelector('.region-select');
             regionSelect.innerHTML = '<option value="">Seleziona Regione</option>';
             Object.keys(italyLocations).sort().forEach(region => {
-                const isSelected = region === 'Toscana' ? 'selected' : '';
+                const isSelected = region === 'Friuli-Venezia Giulia' ? 'selected' : '';
                 regionSelect.innerHTML += `<option value="${region}" ${isSelected}>${region}</option>`;
             });
             updateProvinces(regionSelect, true);
         }
 
-        function updateProvinces(regionSelect, setSienaDefault = false) {
+        function updateProvinces(regionSelect, setUdineDefault = false) {
             const block = regionSelect.closest('.ticket-block');
             const provinceSelect = block.querySelector('.province-select');
             const region = regionSelect.value;
@@ -230,7 +231,7 @@
             provinceSelect.innerHTML = '<option value="">Seleziona Provincia</option>';
             if (italyLocations[region]) {
                 italyLocations[region].sort().forEach(prov => {
-                    const isSelected = (setSienaDefault && prov === 'Siena') ? 'selected' : '';
+                    const isSelected = (setUdineDefault && prov === 'Udine') ? 'selected' : '';
                     provinceSelect.innerHTML += `<option value="${prov}" ${isSelected}>${prov}</option>`;
                 });
             }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crea Biglietto Manuale - Francigena Ultra Marathon</title>
+    <title>Crea Biglietto Manuale - Maunìk Trail</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 p-6">
@@ -60,9 +60,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     <select name="route_choice" required class="border p-2 rounded">
                         <option value="">-- Scelta Tratta --</option>
-                        <option value="Grande Sfida 130 km" {{ old('route_choice') == 'Grande Sfida 130 km' ? 'selected' : '' }}>Grande Sfida - 130 km</option>
-                        <option value="Tratte intermedie" {{ old('route_choice') == 'Tratte intermedie' ? 'selected' : '' }}>Tratte intermedie</option>
-                        <option value="Tratte brevi" {{ old('route_choice') == 'Tratte brevi' ? 'selected' : '' }}>Tratte brevi</option>
+                        <option value="Maunik Trail 23K" {{ old('route_choice') == 'Maunik Trail 23K' ? 'selected' : '' }}>Maunìk Trail — 23 km / 1.200 D+</option>
+                        <option value="Staffetta Maunik" {{ old('route_choice') == 'Staffetta Maunik' ? 'selected' : '' }}>Staffetta Maunìk — 12 km + 11 km</option>
                     </select>
 
                     <select name="tshirt_size" required class="border p-2 rounded">

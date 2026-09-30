@@ -3,20 +3,20 @@
         <div class="center-items">
             <img
                 style="max-width: 200px"
-                alt="Walking Francigena Ultra Marathon"
-                src="/images/francigena/logo-francigena.jpg"
+                alt="Maunìk Trail"
+                src="/images/maunik/logo.avif"
                 loading="lazy"
                 decoding="async"
             >
         </div>
 
         <p class="center-text top-margin">
-            Demo sito Walking Francigena Ultra Marathon 2026.
+            Trail running nel cuore selvaggio della Val Grivò.
         </p>
 
         <div class="grid-3 top-margin">
             <div class="center-text center-items footer">
-                <a href="/#percorsi">Tratte</a>
+                <a href="/#gare">Le gare</a>
                 <a href="/#programma">Programma</a>
                 <a href="/iscrizione">Iscrizioni</a>
             </div>
@@ -33,10 +33,10 @@
             </div>
         </div>
 
-        <p class="center-text top-margin">Siena - Acquapendente · <a class="hyperlink" href="mailto:info@francigenaultramarathon.com">info@francigenaultramarathon.com</a></p>
+        <p class="center-text top-margin">Faedis · Attimis (UD) · <a class="hyperlink" href="mailto:info@mauniktrail.it">info@mauniktrail.it</a></p>
 
         <p class="center-text top-margin-xl">
-            © 2026 Walking Francigena Ultra Marathon. Tutti i diritti riservati.
+            © 2026 A.S.D. Maunìk. Tutti i diritti riservati.
         </p>
         <div class="fullwidth center-items">
             <a href="https://tommasogiovannoni.com" class="center-text top-margin-xl hyperlink">Sviluppato da tommasogiovannoni.com</a>

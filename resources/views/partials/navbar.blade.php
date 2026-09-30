@@ -10,9 +10,12 @@
         </svg>
     </div>
 
-    <div class="logo">
-        <h5 style="color: white;">FRANCIGENA ULTRA MARATHON</h5>
-    </div>
+    <a class="logo" href="/" aria-label="Maunìk Trail - Homepage">
+        <img src="/images/maunik/logo.avif" alt="Maunìk Trail">
+        <span>MAUNÌK TRAIL</span>
+    </a>
+
+    <a class="nav-cta" href="/iscrizione">Iscriviti</a>
 </nav>
 
 <div id="sideMenu" class="side-menu">
@@ -25,8 +28,8 @@
 
     <a class="hamburger-menu-link" href="/">Homepage</a>
     <a class="hamburger-menu-link" href="/iscrizione">Iscrizione</a>
+    <a class="hamburger-menu-link" href="/#gare">Le gare</a>
     <a class="hamburger-menu-link" href="/#programma">Programma</a>
-    <a class="hamburger-menu-link" href="/#percorsi">Tratte</a>
     <a class="hamburger-menu-link" href="/regolamento">Regolamento</a>
     <a class="hamburger-menu-link" href="/contattaci">Contattaci</a>
     <a class="hamburger-menu-link" href="/partnership">Partnership</a>

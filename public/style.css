@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --primary: #c64735;
-  --primary-hover: #9e3027;
-  --primary-soft: #d8ad4a;
+  --primary: #8fdc4c;
+  --primary-hover: #6fba32;
+  --primary-soft: #d9ff9f;
 
-  --bg-main: #f6f0e4;
-  --bg-secondary: #dfe8dc;
+  --bg-main: #f2f5ed;
+  --bg-secondary: #dfead5;
   --bg-card: #FFFFFF;
-  --bg-alt: #d8ad4a;
+  --bg-alt: #8fdc4c;
 
-  --text-main: #191d2f;
-  --text-secondary: #25386a;
+  --text-main: #121611;
+  --text-secondary: #142c18;
   --text-muted: #626569;
   --text-disabled: #8C8C8C;
   --text-white: #FFFFFF;
 
-  --border-light: #ded4c2;
+  --border-light: #cfd8c9;
   --font-base: 'Barlow Condensed', sans-serif;
   --radius-small: 6px;
   --radius-big: 12px;
@@ -263,18 +263,99 @@ section {
 }
 
 .home-hero {
-  background: linear-gradient(rgba(25, 29, 47, 0.18), rgba(25, 29, 47, 0.72)),
-    url(images/francigena/hero-1.jpg);
+  background: linear-gradient(90deg, rgba(5, 15, 8, 0.94) 0%, rgba(5, 15, 8, 0.64) 50%, rgba(5, 15, 8, 0.18) 100%),
+    url('https://static.wixstatic.com/media/7f418a_af22e500d2214084bc087d3ab8a8f556~mv2.jpg/v1/fill/w_1800,h_1100,al_c,q_85,enc_avif,quality_auto/7f418a_af22e500d2214084bc087d3ab8a8f556~mv2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 136px;
+  padding-top: 80px;
 }
 
 .hero-title {
   font-size: 84px;
   font-weight: 900;
 }
+
+/* Maunik identity */
+.maunik-hero__content {
+  align-items: flex-start;
+  max-width: 920px;
+  justify-content: center;
+  min-height: 76vh;
+}
+
+.hero-kicker,
+.section-kicker {
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.maunik-hero .hero-title {
+  color: #fff;
+  line-height: .86;
+  letter-spacing: -.035em;
+}
+
+.maunik-hero .hero-title span { color: var(--primary); }
+.maunik-hero .hero-copy { font-size: 24px; max-width: 650px; }
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-outline { background: transparent; border-color: rgba(255,255,255,.65); }
+.btn-outline:hover { background: #fff; border-color: #fff; color: var(--text-main); }
+
+.race-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--primary);
+  color: var(--text-main);
+  padding: 26px 8%;
+}
+
+.race-strip > div { padding: 4px 28px; border-left: 1px solid rgba(18,22,17,.22); }
+.race-strip > div:first-child { border-left: 0; }
+.race-strip strong, .race-strip span { display: block; }
+.race-strip strong { font-size: 26px; line-height: 1; }
+.race-strip span { font-size: 14px; margin-top: 6px; text-transform: uppercase; letter-spacing: .08em; }
+
+.maunik-intro { background: #fff; }
+.maunik-intro h2 { margin-top: 12px; }
+.maunik-poster-card { position: relative; background: #071108; min-height: 510px; overflow: hidden; color: #fff; }
+.poster-visual { position: absolute; inset: 0; padding: 42px; background: radial-gradient(circle at 90% 15%, rgba(143,220,76,.25), transparent 28%), repeating-linear-gradient(125deg, transparent 0 38px, rgba(143,220,76,.08) 39px 40px); }
+.poster-visual img { width: 68px; height: auto; }
+.poster-visual p { color: var(--primary); font-weight: 800; letter-spacing: .16em; margin-top: 40px; }
+.poster-visual strong { display: block; font-size: 72px; line-height: .72; letter-spacing: -.03em; margin-top: 20px; }
+.poster-visual span { position: absolute; right: 34px; top: 42px; writing-mode: vertical-rl; color: var(--primary); font-weight: 700; letter-spacing: .14em; }
+.poster-caption { position: absolute; right: 0; bottom: 0; display: flex; align-items: baseline; gap: 10px; background: var(--primary); padding: 18px 24px; text-transform: uppercase; font-weight: 700; }
+.poster-caption .numero { font-size: 38px; line-height: 1; }
+
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 50px; }
+.section-heading h2 { margin-top: 10px; }
+.section-heading > p { max-width: 480px; }
+
+.race-section { background: #0b130d; color: #fff; }
+.race-card { min-height: 560px; padding: 34px; display: flex; flex-direction: column; justify-content: space-between; background-size: cover; background-position: center; position: relative; overflow: hidden; }
+.race-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,10,6,.08), rgba(5,10,6,.94)); }
+.race-card--solo { background-image: url('https://static.wixstatic.com/media/7f418a_af22e500d2214084bc087d3ab8a8f556~mv2.jpg/v1/fill/w_1000,h_900,al_c,q_85,enc_avif,quality_auto/7f418a_af22e500d2214084bc087d3ab8a8f556~mv2.jpg'); }
+.race-card--relay { background-image: url('https://static.wixstatic.com/media/7f418a_1a1e105b39784a819c16a479065cbda1~mv2.jpg/v1/fill/w_1000,h_900,al_c,q_85,enc_avif,quality_auto/7f418a_1a1e105b39784a819c16a479065cbda1~mv2.jpg'); }
+.race-card > * { position: relative; z-index: 1; }
+.race-card .route-badge { align-self: flex-start; background: var(--primary); color: var(--text-main); border: 0; }
+.race-card__number { color: var(--primary); font-size: 74px; line-height: .9; font-weight: 900; }
+.race-card__body h3 { font-size: 48px; }
+.race-card__body p:not(.race-card__number) { max-width: 520px; }
+
+.maunik-manifesto { background: var(--primary); color: var(--text-main); padding-right: 26%; }
+.maunik-manifesto .section-kicker { color: #214b1d; }
+.maunik-manifesto h2 { font-size: 52px; margin-top: 14px; }
+.maunik-manifesto .btn-2 { background: #101710; color: #fff; border-color: #101710; }
+
+.card-index { display: inline-block; color: var(--primary-hover); font-weight: 800; letter-spacing: .12em; margin-bottom: 44px; }
+.quick-links { padding-top: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; }
+.quick-links a { display: flex; justify-content: space-between; padding: 28px; background: var(--text-secondary); color: #fff; text-decoration: none; font-size: 24px; text-transform: uppercase; }
+.quick-links a:hover { background: var(--primary); color: var(--text-main); }
+.dark-bg { background: #09100a; }
 
 .hero-copy {
   max-width: 720px;
@@ -781,8 +862,8 @@ section {
   }
 
   .home-hero {
-    background: linear-gradient(rgba(25, 29, 47, 0.22), rgba(25, 29, 47, 0.78)),
-      url(images/francigena/hero-1-mobile.jpg);
+    background: linear-gradient(rgba(5, 15, 8, 0.54), rgba(5, 15, 8, 0.9)),
+      url('https://static.wixstatic.com/media/7f418a_af22e500d2214084bc087d3ab8a8f556~mv2.jpg/v1/fill/w_800,h_1100,al_c,q_85,enc_avif,quality_auto/7f418a_af22e500d2214084bc087d3ab8a8f556~mv2.jpg');
     background-position: center top;
   }
 
@@ -800,6 +881,23 @@ section {
   .hero-title {
     font-size: 42px;
   }
+
+  .maunik-hero__content { min-height: 74vh; }
+  .maunik-hero .hero-title { font-size: 56px; }
+  .maunik-hero .hero-copy { font-size: 18px; }
+  .race-strip { grid-template-columns: 1fr 1fr; padding: 18px 4%; }
+  .race-strip > div { padding: 14px; border-left: 0; border-bottom: 1px solid rgba(18,22,17,.2); }
+  .race-strip strong { font-size: 20px; }
+  .section-heading { display: block; }
+  .section-heading > p { margin-top: 20px; }
+  .maunik-poster-card { min-height: 410px; }
+  .poster-visual strong { font-size: 54px; }
+  .race-card { min-height: 480px; padding: 26px; }
+  .race-card__number { font-size: 54px; }
+  .race-card__body h3 { font-size: 34px; }
+  .maunik-manifesto { padding-right: 6%; }
+  .maunik-manifesto h2 { font-size: 32px; }
+  .quick-links { grid-template-columns: 1fr; }
 
   .countdown {
     gap: 10px;

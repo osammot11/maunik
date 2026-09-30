@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ $title ?? 'Francigena Ultra Marathon' }}</title>
-    <meta name="description" content="{{ $description ?? 'Walking Francigena Ultra Marathon: cammino non competitivo da Siena ad Acquapendente, con tratte dai 15 ai 130 km.' }}">
+    <title>{{ $title ?? 'Maunìk Trail' }}</title>
+    <meta name="description" content="{{ $description ?? 'Maunìk Trail: corsa in montagna nella Val Grivò, tra Faedis e Attimis.' }}">
     @isset($canonical)
         <link rel="canonical" href="{{ $canonical }}">
     @endisset
-    <link rel="icon" type="image/jpeg" href="/images/francigena/logo-francigena.jpg">
+    <link rel="icon" type="image/avif" href="/images/maunik/logo.avif">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ $title ?? 'Francigena Ultra Marathon' }}">
-    <meta property="og:description" content="{{ $description ?? 'Walking Francigena Ultra Marathon: cammino non competitivo da Siena ad Acquapendente, con tratte dai 15 ai 130 km.' }}">
+    <meta property="og:title" content="{{ $title ?? 'Maunìk Trail' }}">
+    <meta property="og:description" content="{{ $description ?? 'Maunìk Trail: corsa in montagna nella Val Grivò, tra Faedis e Attimis.' }}">
     <meta property="og:url" content="{{ $canonical ?? url()->current() }}">
-    <meta property="og:image" content="https://www.francigenaultramarathon.com/wp-content/uploads/2026/03/Bozza-aggiornamento-sito-WFU-2025-13-2048x1151.png">
+    <meta property="og:image" content="https://static.wixstatic.com/media/7f418a_af22e500d2214084bc087d3ab8a8f556~mv2.jpg">
     <meta property="og:locale" content="it_IT">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ $title ?? 'Francigena Ultra Marathon' }}">
-    <meta name="twitter:description" content="{{ $description ?? 'Walking Francigena Ultra Marathon: cammino non competitivo da Siena ad Acquapendente, con tratte dai 15 ai 130 km.' }}">
-    <meta name="twitter:image" content="https://www.francigenaultramarathon.com/wp-content/uploads/2026/03/Bozza-aggiornamento-sito-WFU-2025-13-2048x1151.png">
+    <meta name="twitter:title" content="{{ $title ?? 'Maunìk Trail' }}">
+    <meta name="twitter:description" content="{{ $description ?? 'Maunìk Trail: corsa in montagna nella Val Grivò, tra Faedis e Attimis.' }}">
+    <meta name="twitter:image" content="https://static.wixstatic.com/media/7f418a_af22e500d2214084bc087d3ab8a8f556~mv2.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
     @stack('head')
 </head>
 
-<body class="has-topbar sgranar-theme {{ $bodyClass ?? '' }}">
+<body class="maunik-theme {{ $bodyClass ?? '' }}">
     <div class="site-header">        
         @include('partials.navbar')
     </div>
